@@ -1,0 +1,28 @@
+/*------start mixin breaking points---------*/
+@mixin mobile {
+  @media(max-width:$mobile){
+    @content;
+  }
+}
+@mixin tablet {
+  @media(min-width:$tablets)and(max-width:$computers){
+    @content;
+  }
+}
+/*------End   mixin breaking points---------*/
+/*------start  mixin Prefixes---------------*/
+@mixin prefixer($property,$value,$prefixes:()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}:$value;
+  }
+  #{$property}:$value;
+}
+/*------End  mixin Prefixes-----------------*/
+
+/*------start mixin of Fonts-------------*/
+@mixin Fonts($family,$size,$weight) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+/*------End mixin of Fonts-------------*/
