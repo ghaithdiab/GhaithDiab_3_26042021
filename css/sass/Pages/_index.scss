@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap'); /*font-family: 'Shrikhand', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); /*font-family: 'Roboto', sans-serif;*/
+
+
+*{
+  margin: 0;
+  padding: 0;
+  @include prefixer(box-sizing,border-box,webkit);
+}
+*:active{
+  -webkit-tap-highlight-color: transparent;
+}
+.section1{
+  display: flex;
+  width: 100%;
+  @include mobile{
+    flex-direction: column;
+  }
+  .explorer{
+      height: 300px;
+      background-color: #F7F7F7;
+      text-align: center;
+    div{
+      width: 80%;
+      margin: auto;
+    h1{
+        margin-top: 40px;
+      }
+    p{
+      margin-top: 20px;
+      margin-bottom: 30px;
+      @include Fonts(Roboto,$fontSize,100);
+    }
+    button{
+      @extend %btn;
+    }
+    }
+    }
+  .fonctionement{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    }
+  }
+  

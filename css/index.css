@@ -4,18 +4,74 @@
 /*------End varibles of Colors-------------*/
 /*------start varibles of Fonts-------------*/
 /*------End varibles of Fonts-------------*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+.section1 .explorer div button {
+  padding: 15px;
+  color: #fff;
+  font-size: 1em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  border: 0;
+  border-radius: 30px;
+  -webkit-box-shadow: 5px 5px 10px #ccc;
+          box-shadow: 5px 5px 10px #ccc;
+  cursor: pointer;
+}
+
+.function {
+  width: 100%;
+  background-color: #F7F7F7;
+  margin: 20px auto;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  -webkit-box-shadow: 5px 5px 10px #ececec;
+          box-shadow: 5px 5px 10px #ececec;
+  position: relative;
+  cursor: pointer;
+}
+
+.function img {
+  height: 20px;
+  width: 20px;
+  margin: 0px 20px;
+}
+
+.function a {
+  color: #000;
+  text-decoration: none;
+  margin: 0px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.function::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 26px;
+  left: -6px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #fff;
+}
+
 /*------start mixin breaking points---------*/
 /*------End   mixin breaking points---------*/
 /*------start  mixin Prefixes---------------*/
 /*------End  mixin Prefixes-----------------*/
 /*------start mixin of Fonts-------------*/
 /*------End mixin of Fonts-------------*/
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /*font-family: 'Shrikhand', cursive;*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 /*font-family: 'Roboto', sans-serif;*/
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 main {
   width: 95%;
   margin: auto;
@@ -114,7 +170,56 @@ main header .location img {
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box !important;
-          box-sizing: border-box !important;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/*# sourceMappingURL=ALaFrançaise.css.map */
+
+*:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .section1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.section1 .explorer {
+  height: 300px;
+  background-color: #F7F7F7;
+  text-align: center;
+}
+
+.section1 .explorer div {
+  width: 80%;
+  margin: auto;
+}
+
+.section1 .explorer div h1 {
+  margin-top: 40px;
+}
+
+.section1 .explorer div p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-family: Roboto;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.section1 .fonctionement {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+}
+/*# sourceMappingURL=index.css.map */
