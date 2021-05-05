@@ -19,6 +19,7 @@
   -webkit-box-shadow: 5px 5px 10px #ccc;
           box-shadow: 5px 5px 10px #ccc;
   cursor: pointer;
+  outline: none;
 }
 
 .function {
@@ -51,17 +52,20 @@
   font-weight: bold;
 }
 
-.function::before {
-  content: "";
+.function .number {
   height: 20px;
   width: 20px;
   position: absolute;
   top: 26px;
-  left: -6px;
+  left: -10px;
   text-align: center;
   border-radius: 50%;
   background-color: #9356DC;
   color: #fff;
+}
+
+.function:hover {
+  background-color: rgba(147, 86, 220, 0.1);
 }
 
 /*------start mixin breaking points---------*/
@@ -70,6 +74,8 @@
 /*------End  mixin Prefixes-----------------*/
 /*------start mixin of Fonts-------------*/
 /*------End mixin of Fonts-------------*/
+/*------Start mixin of overlay---------*/
+/*------end mixin of overlay-----------*/
 /*font-family: 'Shrikhand', cursive;*/
 /*font-family: 'Roboto', sans-serif;*/
 main {
@@ -182,6 +188,13 @@ main header .location img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
@@ -196,8 +209,23 @@ main header .location img {
 
 .section1 .explorer {
   height: 300px;
+  width: 65%;
   background-color: #F7F7F7;
   text-align: center;
+  margin-top: 70px;
+}
+
+@media (max-width: 767px) {
+  .section1 .explorer {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section1 .explorer {
+    width: 55%;
+  }
 }
 
 .section1 .explorer div {
@@ -218,8 +246,21 @@ main header .location img {
 }
 
 .section1 .fonctionement {
-  width: 90%;
-  margin: auto;
+  width: 30%;
   margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  .section1 .fonctionement {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section1 .fonctionement {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

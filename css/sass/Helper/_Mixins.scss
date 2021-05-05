@@ -9,6 +9,7 @@
     @content;
   }
 }
+
 /*------End   mixin breaking points---------*/
 /*------start  mixin Prefixes---------------*/
 @mixin prefixer($property,$value,$prefixes:()) {
@@ -26,3 +27,12 @@
   font-weight: $weight;
 }
 /*------End mixin of Fonts-------------*/
+/*------Start mixin of overlay---------*/
+// @mixin overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+/*------end mixin of overlay-----------*/

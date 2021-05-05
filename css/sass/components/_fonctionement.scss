@@ -1,3 +1,4 @@
+
 .function{
   width: 100%;
   background-color: #F7F7F7;
@@ -21,16 +22,18 @@
     font-size: $fontSize;
     font-weight: bold;
   }
-  &::before{
-    content: "";
+  .number{
     height: 20px;
     width: 20px;
     position: absolute;
     top: 26px;
-    left: -6px;
+    left: -10px;
     text-align: center;
     border-radius: 50%;
     background-color: $primaire;
     color: #fff;
+  }
+  &:hover{
+    background-color: rgba($primaire,0.1);
   }
 }
