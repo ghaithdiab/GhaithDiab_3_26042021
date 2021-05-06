@@ -1,0 +1,30 @@
+footer{
+  background-color: #353535;
+  padding: 25px;
+  @include mobile{
+  
+  }
+h1{
+  color: #fff;
+  @include Fonts(Shrikhand,$fontSize,400);
+  margin-bottom: 20px;
+}
+ul{
+  list-style: none;
+  li{
+    a{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      text-decoration: none;
+    }
+    @include Fonts(Roboto,1em,400);
+  img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  }
+}
+
+} 

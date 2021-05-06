@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap'); /*font-family: 'Shrikhand', cursive;*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); /*font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap'); /*font-family: 'Roboto', sans-serif;*/
 
 
 *{
@@ -41,7 +41,7 @@
     p{
       margin-top: 20px;
       margin-bottom: 30px;
-      @include Fonts(Roboto,$fontSize,100);
+      @include Fonts(Roboto,$fontSize,300);
     }
     button{
       @extend %btn;
@@ -60,4 +60,94 @@
       width: 40%;
     }
   } 
+}
+section{
+  width: 100%;
+  background-color: #F6F6F6;
+  padding: 20px;
+  @include mobile{
+    width: 100%;
+    margin-top: 50px;
+  }
+  h1{
+    padding-top: 40px;
+    margin-left:15px ;
+    @include Fonts(Roboto,2em,500);
+  }
+  .container{
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    @include mobile{
+      flex-direction: column;
+    }
+    .link{
+      display: block;
+      width: 22%;
+      margin: auto;
+      text-decoration: none;
+      color: #000;
+    @include mobile{
+      width: 100%;
+    }
+    @include tablet{
+      width: 30%;
+      margin: 10px;
+    }
+      .cart{
+    @include cart;
+    @include mobile{
+      width: 100%;
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+    .backImg{
+        @include backimg('/GhaithDiab_3_26042021/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+        
+      }
+    .backimg1{
+      @include backimg('/GhaithDiab_3_26042021/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+      }
+    .backimg2{
+      @include backimg('/GhaithDiab_3_26042021/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+      }
+    .backimg3{
+        @include backimg('/GhaithDiab_3_26042021/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+      }
+    .nouveau{
+      display: block;
+      width: 100px;
+      border-radius: 3px;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background-color: #99E2D0;
+      color: #41AD93;
+      text-align: center;
+      @include Fonts(Roboto,$fontSize,500);
+      
+      }
+    .heading{
+      display: flex;
+      justify-content: space-between;
+    }
+    h3{
+      margin: 20px 10px 10px 10px;
+      @include Fonts(Roboto,$fontSize,600);
+    }
+    p{
+      @include Fonts(Roboto,font-size,400);
+      margin-left: 10px ;
+    }
+    .heart{
+      margin-top: 20px;
+      margin-right: 20px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+    }
+    } 
+  }
 }
