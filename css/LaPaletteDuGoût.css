@@ -17,7 +17,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 /*font-family: 'Roboto', sans-serif;*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 main {
   width: 95%;
   margin: auto;
@@ -28,8 +28,12 @@ main header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 767px) {
@@ -38,17 +42,50 @@ main header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     height: 100px;
   }
 }
 
-main header img {
+main header .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px;
+  width: 55%;
+}
+
+@media (max-width: 767px) {
+  main header .logo-container {
+    width: 60%;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    margin: 15px 0 0 0;
+  }
+}
+
+main header .logo-container .back {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: url("/GhaithDiab_3_26042021/images/icon/arrow-left-solid.svg") no-repeat center/cover;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+
+main header .logo-container .logo {
+  display: block;
   height: 30px;
   width: 150px;
-  margin-top: 15px;
+}
+
+main header .logo-container .logo img {
+  height: 30px;
+  width: 150px;
+  margin-left: 40px;
 }
 
 main header .location {
@@ -111,6 +148,22 @@ main header .location img {
   }
 }
 
+main .menu button {
+  padding: 15px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 1em;
+  font-weight: 400;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  border: 0;
+  border-radius: 30px;
+  -webkit-box-shadow: 5px 5px 10px #ccc;
+          box-shadow: 5px 5px 10px #ccc;
+  cursor: pointer;
+  outline: none;
+}
+
 /*font-family: 'Shrikhand', cursive;*/
 /*font-family: 'Roboto', sans-serif;*/
 * {
@@ -118,6 +171,189 @@ main header .location img {
   padding: 0;
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
+}
+
+*:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+main {
+  position: relative;
+}
+
+main .backGround {
+  width: 100%;
+  height: 500px;
+  background: url("/GhaithDiab_3_26042021/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat center/cover;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  main .backGround {
+    height: 300px;
+  }
+}
+
+main .menu {
+  width: 100%;
+  background-color: #F6F6F6;
+  position: absolute;
+  top: 450px;
+  left: 0;
+  z-index: 11;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  main .menu {
+    top: 250px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+}
+
+main .menu .heading {
+  width: 90%;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .menu .heading h1 {
+  font-family: Shrikhand;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+main .menu .heading .heart {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("/GhaithDiab_3_26042021/images/icon/heart.svg");
+}
+
+main .menu .heading .heart-solid {
+  display: none;
+}
+
+main .menu .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  margin: 0 auto 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  main .menu .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+main .menu .container .column {
+  width: 100%;
+  margin-top: 30PX;
+  position: relative;
+}
+
+main .menu .container .column a {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 7px;
+  text-decoration: none;
+  color: #000;
+  font-family: Roboto;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+main .menu .container .column a:after {
+  content: "";
+  height: 3px;
+  width: 40px;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  background-color: #99E2D0;
+  margin-bottom: 10px;
+  margin-left: 7px;
+}
+
+main .menu .row {
+  width: 99%;
+  border-radius: 12px;
+  -webkit-box-shadow: 5px 7px 10px #ececec;
+          box-shadow: 5px 7px 10px #ececec;
+  background-color: #fff;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+
+main .menu .row div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+}
+
+main .menu .row div h3 {
+  font-family: Roboto;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+main .menu .row div .discription {
+  font-family: Roboto;
+  font-size: 0.9em;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+main .menu .row .price {
+  font-family: Roboto;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+main .menu button {
+  width: 50%;
+  margin: 30px auto;
 }
 
 footer {

@@ -1,7 +1,7 @@
 %btn{
   padding: 15px;
     color: #fff;
-    font-size: 1em;
+    @include Fonts(Roboto,1em,400);
     background: linear-gradient(to bottom, #FF79DA, #9356DC);
     border: 0;
     border-radius: 30px;
