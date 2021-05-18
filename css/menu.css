@@ -12,11 +12,14 @@
 /*------End mixin of Fonts-------------*/
 /*------Start mixin of cart---------*/
 /*------end mixin of cart-----------*/
+/*------start mixin for background--------*/
+/*--------End mixin for background-----*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /*font-family: 'Shrikhand', cursive;*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 /*font-family: 'Roboto', sans-serif;*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 main {
   width: 95%;
@@ -60,9 +63,9 @@ main header .logo-container {
 @media (max-width: 767px) {
   main header .logo-container {
     width: 60%;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin: 15px 0 0 0;
   }
 }
@@ -77,15 +80,12 @@ main header .logo-container .back {
 }
 
 main header .logo-container .logo {
-  display: block;
-  height: 30px;
-  width: 150px;
-}
-
-main header .logo-container .logo img {
-  height: 30px;
-  width: 150px;
-  margin-left: 40px;
+  text-decoration: none;
+  color: #000;
+  margin-left: 50px;
+  font-family: Shrikhand;
+  font-size: 1.5em;
+  font-weight: 900;
 }
 
 main header .location {
@@ -103,7 +103,7 @@ main header .location {
   cursor: pointer;
   font-family: Roboto;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @media (max-width: 767px) {
@@ -113,7 +113,7 @@ main header .location {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 15px;
+    padding-top: 7px;
     padding-right: 35px;
     border: 0;
   }
@@ -124,7 +124,7 @@ main header .location {
     height: 5px;
     background: -webkit-gradient(linear, left top, left bottom, from(#D4D4D4), to(#EDEDED));
     background: linear-gradient(to bottom, #D4D4D4, #EDEDED);
-    top: 50px;
+    top: 55px;
     left: 0;
   }
 }
@@ -152,7 +152,7 @@ main .menu button {
   padding: 15px;
   color: #fff;
   font-family: Roboto;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 400;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
@@ -177,32 +177,26 @@ main .menu button {
   -webkit-tap-highlight-color: transparent;
 }
 
-main {
-  position: relative;
-}
-
 main .backGround {
   width: 100%;
   height: 500px;
-  background: url("/GhaithDiab_3_26042021/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat center/cover;
-  position: absolute;
-  top: 50px;
-  left: 0;
   z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
 }
 
 @media (max-width: 767px) {
   main .backGround {
     height: 300px;
+    margin-top: -50px;
   }
 }
 
 main .menu {
   width: 100%;
   background-color: #F6F6F6;
-  position: absolute;
-  top: 450px;
-  left: 0;
+  margin-top: -100px;
   z-index: 11;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
@@ -235,6 +229,9 @@ main .menu .heading {
 }
 
 main .menu .heading h1 {
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
   font-family: Shrikhand;
   font-size: 1.5em;
   font-weight: 300;
@@ -244,7 +241,11 @@ main .menu .heading .heart {
   display: block;
   width: 30px;
   height: 30px;
-  background: url("/GhaithDiab_3_26042021/images/icon/heart.svg");
+  background: url("/GhaithDiab_3_26042021/images/icon/heart.svg") no-repeat center/cover;
+}
+
+main .menu .heading .heart:hover {
+  background: url("/GhaithDiab_3_26042021/images/icon/heart-solid.svg") no-repeat center/cover;
 }
 
 main .menu .heading .heart-solid {
@@ -272,10 +273,23 @@ main .menu .container {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  main .menu .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 main .menu .container .column {
-  width: 100%;
+  width: calc(95% /3);
   margin-top: 30PX;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  main .menu .container .column {
+    width: 98%;
+  }
 }
 
 main .menu .container .column a {
@@ -314,17 +328,46 @@ main .menu .row {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px;
+  cursor: pointer;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
-main .menu .row div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+main .menu .row .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .menu .row .right .effect {
+  width: 0px;
+  height: 70px;
+  background-color: #99E2D0;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  position: relative;
+  overflow: hidden;
+}
+
+main .menu .row .right .effect img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+main .menu .row .left {
   min-width: 0;
 }
 
-main .menu .row div h3 {
+main .menu .row .left h3 {
   font-family: Roboto;
   font-size: 1.1em;
   font-weight: 600;
@@ -332,28 +375,71 @@ main .menu .row div h3 {
   white-space: nowrap;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  margin: 10px 0px 0 10px;
 }
 
-main .menu .row div .discription {
+main .menu .row .left .discription {
   font-family: Roboto;
   font-size: 0.9em;
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  margin: 10px 0px 10px 10px;
 }
 
 main .menu .row .price {
   font-family: Roboto;
   font-size: 1.2em;
   font-weight: 600;
-  margin-top: 25px;
-  margin-right: 20px;
+  margin-top: 36px;
+  margin-right: 6px;
+}
+
+main .menu .row:hover .effect {
+  width: 65px;
+}
+
+main .menu .row:hover .effect img {
+  -webkit-transform: rotate(355deg);
+          transform: rotate(355deg);
 }
 
 main .menu button {
-  width: 50%;
+  width: 20%;
   margin: 30px auto;
+}
+
+@media (max-width: 767px) {
+  main .menu button {
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 footer {
@@ -391,4 +477,4 @@ footer ul li img {
   height: 20px;
   margin-right: 10px;
 }
-/*# sourceMappingURL=LaPaletteDuGoût.css.map */
+/*# sourceMappingURL=menu.css.map */

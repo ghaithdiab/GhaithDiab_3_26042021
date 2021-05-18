@@ -1,15 +1,17 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap'); 
 .function{
   width: 100%;
   background-color: #F7F7F7;
   margin: 20px auto;
   padding: 25px;
   display: flex;
-  border-radius: 30px;
+  border-radius: 20px;
   box-shadow: 5px 5px 10px #ececec;
   position: relative;
   cursor: pointer;
-  img{
+  animation: fadeIn 1s;
+
+  svg{
     height: 20px;
     width: 20px;
     margin: 0px 20px;
@@ -17,7 +19,7 @@
   a{
     color: #000;
     text-decoration: none;
-    margin: 0px 20px;
+    margin: 0px 10px;
     font-family: 'Roboto', sans-serif;
     font-size: $fontSize;
     font-weight: bold;
@@ -35,5 +37,10 @@
   }
   &:hover{
     background-color: rgba($primaire,0.1);
+  svg{
+    path{
+      fill: $primaire;
+    }
+  }
   }
 }

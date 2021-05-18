@@ -4,15 +4,28 @@
 /*------End varibles of Colors-------------*/
 /*------start varibles of Fonts-------------*/
 /*------End varibles of Fonts-------------*/
+/*------start mixin breaking points---------*/
+/*------End   mixin breaking points---------*/
+/*------start  mixin Prefixes---------------*/
+/*------End  mixin Prefixes-----------------*/
+/*------start mixin of Fonts-------------*/
+/*------End mixin of Fonts-------------*/
+/*------Start mixin of cart---------*/
+/*------end mixin of cart-----------*/
+/*------start mixin for background--------*/
+/*--------End mixin for background-----*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 .section1 .explorer div button {
   padding: 15px;
   color: #fff;
-  font-size: 1em;
-  font-weight: 500;
+  font-family: Roboto;
+  font-size: 1.2em;
+  font-weight: 400;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   border: 0;
@@ -31,14 +44,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 30px;
+  border-radius: 20px;
   -webkit-box-shadow: 5px 5px 10px #ececec;
           box-shadow: 5px 5px 10px #ececec;
   position: relative;
   cursor: pointer;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
-.function img {
+.function svg {
   height: 20px;
   width: 20px;
   margin: 0px 20px;
@@ -47,7 +62,7 @@
 .function a {
   color: #000;
   text-decoration: none;
-  margin: 0px 20px;
+  margin: 0px 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2em;
   font-weight: bold;
@@ -69,14 +84,10 @@
   background-color: rgba(147, 86, 220, 0.1);
 }
 
-/*------start mixin breaking points---------*/
-/*------End   mixin breaking points---------*/
-/*------start  mixin Prefixes---------------*/
-/*------End  mixin Prefixes-----------------*/
-/*------start mixin of Fonts-------------*/
-/*------End mixin of Fonts-------------*/
-/*------Start mixin of cart---------*/
-/*------end mixin of cart-----------*/
+.function:hover svg path {
+  fill: #9356DC;
+}
+
 /*font-family: 'Shrikhand', cursive;*/
 /*font-family: 'Roboto', sans-serif;*/
 main {
@@ -121,9 +132,9 @@ main header .logo-container {
 @media (max-width: 767px) {
   main header .logo-container {
     width: 60%;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin: 15px 0 0 0;
   }
 }
@@ -138,15 +149,12 @@ main header .logo-container .back {
 }
 
 main header .logo-container .logo {
-  display: block;
-  height: 30px;
-  width: 150px;
-}
-
-main header .logo-container .logo img {
-  height: 30px;
-  width: 150px;
-  margin-left: 40px;
+  text-decoration: none;
+  color: #000;
+  margin-left: 50px;
+  font-family: Shrikhand;
+  font-size: 1.5em;
+  font-weight: 900;
 }
 
 main header .location {
@@ -164,7 +172,7 @@ main header .location {
   cursor: pointer;
   font-family: Roboto;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @media (max-width: 767px) {
@@ -174,7 +182,7 @@ main header .location {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 15px;
+    padding-top: 7px;
     padding-right: 35px;
     border: 0;
   }
@@ -185,7 +193,7 @@ main header .location {
     height: 5px;
     background: -webkit-gradient(linear, left top, left bottom, from(#D4D4D4), to(#EDEDED));
     background: linear-gradient(to bottom, #D4D4D4, #EDEDED);
-    top: 50px;
+    top: 55px;
     left: 0;
   }
 }
@@ -220,6 +228,10 @@ main header .location img {
 
 *:active {
   -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .section1 {
@@ -273,14 +285,26 @@ main header .location img {
 
 .section1 .explorer div h1 {
   margin-top: 40px;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+  font-family: Roboto;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 .section1 .explorer div p {
   margin-top: 20px;
   margin-bottom: 30px;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
   font-family: Roboto;
   font-size: 1.2em;
   font-weight: 300;
+}
+
+.section1 .explorer div button {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
 .section1 .fonctionement {
@@ -300,6 +324,12 @@ main header .location img {
   .section1 .fonctionement {
     width: 40%;
   }
+}
+
+.section1 .fonctionement h1 {
+  font-family: Roboto;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 section {
@@ -349,6 +379,8 @@ section .container .link {
   margin: auto;
   text-decoration: none;
   color: #000;
+  -webkit-animation: fadeIn 1.5s;
+          animation: fadeIn 1.5s;
 }
 
 @media (max-width: 767px) {
@@ -359,8 +391,7 @@ section .container .link {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   section .container .link {
-    width: 30%;
-    margin: 10px;
+    width: 40%;
   }
 }
 
@@ -445,7 +476,7 @@ section .container .link .cart .heading {
 }
 
 section .container .link .cart h3 {
-  margin: 20px 10px 10px 10px;
+  margin: 25px 10px 3px 10px;
   font-family: Roboto;
   font-size: 1.2em;
   font-weight: 600;
@@ -453,17 +484,68 @@ section .container .link .cart h3 {
 
 section .container .link .cart p {
   font-family: Roboto;
-  font-size: font-size;
+  font-size: 1.2em;
   font-weight: 400;
   margin-left: 10px;
 }
 
 section .container .link .cart .heart {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-right: 20px;
   width: 30px;
   height: 30px;
   cursor: pointer;
+  background: url("/GhaithDiab_3_26042021/images/icon/heart.svg") no-repeat center/cover;
+}
+
+section .container .link .cart .heart:hover {
+  background: url("/GhaithDiab_3_26042021/images/icon/heart-solid.svg") no-repeat center/cover;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.dlay-1 {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.dlay-2 {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.dlay-3 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.dlay-4 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 footer {
