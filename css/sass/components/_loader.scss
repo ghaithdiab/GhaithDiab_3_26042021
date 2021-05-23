@@ -1,0 +1,124 @@
+.loader{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  animation: fadeOut 3s;
+  animation-fill-mode: forwards;
+  display: flex;
+  .loader-conatainer{
+    height: 200px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+    @include mobile{
+      width: 50%;
+    }
+    .circle{
+      display: inline-block;
+      position: relative;
+      height: 300px;
+      width:35%;
+      top: 25%;
+      left: 15%;
+      animation: loading 2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      @include mobile{
+        height: 50%;
+        width: 50%;
+        top: 18%;
+        left: 5%;
+      }
+      @include tablet{
+        top: 14%;
+        left: 5%;
+        height: 40%;
+        width: 40%;
+      }
+      div{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: 6px solid #F3E900;
+        border-radius: 50%;
+        border-color: transparent transparent #F3E900 transparent;
+        @include mobile{
+          // height: 100px;
+          // width: 100px;
+        }
+      &:nth-child(1){
+        animation-delay: -1s;
+      }
+      &:nth-child(2){
+        animation-delay: -0.45s;
+      }
+      &:nth-child(3){
+        animation-delay: -0.30s;
+      }
+      }
+    }
+    img{
+      animation: pan 2s infinite;
+    }
+    .line{
+      width: 75px;
+      height: 20px;
+      border-radius: 30px;
+      background-color: #F6F3F4;
+      align-self: flex-start;
+      margin-left: 45px;
+      animation: LineAnimation 2s infinite;
+      @include mobile{
+        width: 40%;
+        height: 10px;
+        margin-left: 25px;
+      }
+      @include tablet(){
+        margin-left: 10px;
+        width: 35%;
+        height: 10px;
+      }
+    }
+  }
+}
+
+
+@keyframes fadeOut {
+  100%{
+    visibility: hidden;
+  }
+}
+
+
+
+@keyframes LineAnimation {
+  50%{
+    transform: scaleX(0.7)
+  }
+  100%{
+    transform: scaleX(1)
+  }
+}
+
+@keyframes pan {
+  50%{
+    transform: rotate(10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes loading {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

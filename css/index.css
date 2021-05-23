@@ -20,6 +20,210 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+.loader {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  -webkit-animation: fadeOut 3s;
+          animation: fadeOut 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.loader .loader-conatainer {
+  height: 200px;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .loader .loader-conatainer {
+    width: 50%;
+  }
+}
+
+.loader .loader-conatainer .circle {
+  display: inline-block;
+  position: relative;
+  height: 300px;
+  width: 35%;
+  top: 25%;
+  left: 15%;
+  -webkit-animation: loading 2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: loading 2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+@media (max-width: 767px) {
+  .loader .loader-conatainer .circle {
+    height: 50%;
+    width: 50%;
+    top: 18%;
+    left: 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .loader .loader-conatainer .circle {
+    top: 14%;
+    left: 5%;
+    height: 40%;
+    width: 40%;
+  }
+}
+
+.loader .loader-conatainer .circle div {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 6px solid #F3E900;
+  border-radius: 50%;
+  border-color: transparent transparent #F3E900 transparent;
+}
+
+.loader .loader-conatainer .circle div:nth-child(1) {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.loader .loader-conatainer .circle div:nth-child(2) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.loader .loader-conatainer .circle div:nth-child(3) {
+  -webkit-animation-delay: -0.30s;
+          animation-delay: -0.30s;
+}
+
+.loader .loader-conatainer img {
+  -webkit-animation: pan 2s infinite;
+          animation: pan 2s infinite;
+}
+
+.loader .loader-conatainer .line {
+  width: 75px;
+  height: 20px;
+  border-radius: 30px;
+  background-color: #F6F3F4;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 45px;
+  -webkit-animation: LineAnimation 2s infinite;
+          animation: LineAnimation 2s infinite;
+}
+
+@media (max-width: 767px) {
+  .loader .loader-conatainer .line {
+    width: 40%;
+    height: 10px;
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .loader .loader-conatainer .line {
+    margin-left: 10px;
+    width: 35%;
+    height: 10px;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes LineAnimation {
+  50% {
+    -webkit-transform: scaleX(0.7);
+            transform: scaleX(0.7);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes LineAnimation {
+  50% {
+    -webkit-transform: scaleX(0.7);
+            transform: scaleX(0.7);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes pan {
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes pan {
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .section1 .explorer div button {
   padding: 15px;
   color: #fff;
@@ -49,8 +253,8 @@
           box-shadow: 5px 5px 10px #ececec;
   position: relative;
   cursor: pointer;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s 3s;
+          animation: fadeIn 1s 3s;
 }
 
 .function svg {
@@ -285,8 +489,8 @@ html {
 
 .section1 .explorer div h1 {
   margin-top: 40px;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s 3s;
+          animation: fadeIn 1s 3s;
   font-family: Roboto;
   font-size: 2em;
   font-weight: 600;
@@ -295,16 +499,16 @@ html {
 .section1 .explorer div p {
   margin-top: 20px;
   margin-bottom: 30px;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s 3s;
+          animation: fadeIn 1s 3s;
   font-family: Roboto;
   font-size: 1.2em;
   font-weight: 300;
 }
 
 .section1 .explorer div button {
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s 3s;
+          animation: fadeIn 1s 3s;
 }
 
 .section1 .fonctionement {
@@ -379,8 +583,8 @@ section .container .link {
   margin: auto;
   text-decoration: none;
   color: #000;
-  -webkit-animation: fadeIn 1.5s;
-          animation: fadeIn 1.5s;
+  -webkit-animation: fadeIn 1.5s 3s;
+          animation: fadeIn 1.5s 3s;
 }
 
 @media (max-width: 767px) {
