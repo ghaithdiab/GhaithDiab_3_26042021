@@ -79,16 +79,23 @@ section{
     width: 100%;
     margin-top: 50px;
   }
-  h1{
+  h2{
     padding-top: 40px;
     margin-left:15px ;
     @include Fonts(Roboto,2em,500); 
+    @include tablet{
+      margin-left: 35px;
+    }
+    @include mobile{
+      margin-left: 0px;
+    }
   }
   .container{
     display: flex;
     align-content: space-around;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-bottom: 40px;
     @include mobile{
       flex-direction: column;
     }
@@ -113,8 +120,7 @@ section{
       margin-top: 0;
     }
     .backImg{
-        // background: url('/GhaithDiab_3_26042021/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg') no-repeat center/cover;
-        @include backimg('/GhaithDiab_3_26042021/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg'); 
+      @include backimg('/GhaithDiab_3_26042021/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg'); 
         
       }
     .backimg1{
@@ -128,15 +134,17 @@ section{
       }
     .nouveau{
       display: block;
-      width: 100px;
-      border-radius: 3px;
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      background-color: #99E2D0;
-      color: #41AD93;
-      text-align: center;
-      @include Fonts(Roboto,$fontSize,500);
+    width: 82px;
+    border-radius: 3px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #99E2D0;
+    color: #41AD93;
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+      @include Fonts(Roboto,1em,500);
       
       }
     .heading{
@@ -160,12 +168,12 @@ section{
       background: url('/GhaithDiab_3_26042021/images/icon/heart.svg') no-repeat center /cover;
     &:hover{
       background: url('/GhaithDiab_3_26042021/images/icon/heart-solid.svg') no-repeat center /cover;
+      }
     }
     }
     }
     } 
   }
-}
 
 @keyframes fadeIn {
   from{

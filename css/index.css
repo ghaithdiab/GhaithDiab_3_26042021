@@ -225,7 +225,7 @@
 }
 
 .section1 .explorer div button {
-  padding: 15px;
+  padding: 15px 30px;
   color: #fff;
   font-family: Roboto;
   font-size: 1.2em;
@@ -270,6 +270,12 @@
   font-family: 'Roboto', sans-serif;
   font-size: 1.2em;
   font-weight: bold;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .function a {
+    font-size: 0.8em;
+  }
 }
 
 .function .number {
@@ -339,7 +345,7 @@ main header .logo-container {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin: 15px 0 0 0;
+    margin: 10px 0 0 0;
   }
 }
 
@@ -371,7 +377,7 @@ main header .location {
   height: 30px;
   width: 175px;
   margin-top: 10px;
-  padding: 6px 10px 15px 10px;
+  padding: 4px 10px 15px 10px;
   border: 1px solid gray;
   cursor: pointer;
   font-family: Roboto;
@@ -406,6 +412,7 @@ main header .location img {
   height: 15px;
   width: 15px;
   margin: 0;
+  padding-top: 4px;
 }
 
 @media (max-width: 767px) {
@@ -549,12 +556,24 @@ section {
   }
 }
 
-section h1 {
+section h2 {
   padding-top: 40px;
   margin-left: 15px;
   font-family: Roboto;
   font-size: 2em;
   font-weight: 500;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  section h2 {
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  section h2 {
+    margin-left: 0px;
+  }
 }
 
 section .container {
@@ -566,6 +585,7 @@ section .container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {
@@ -657,7 +677,7 @@ section .container .link .cart .backimg3 {
 
 section .container .link .cart .nouveau {
   display: block;
-  width: 100px;
+  width: 82px;
   border-radius: 3px;
   position: absolute;
   top: 15px;
@@ -665,8 +685,10 @@ section .container .link .cart .nouveau {
   background-color: #99E2D0;
   color: #41AD93;
   text-align: center;
+  height: 30px;
+  padding: 5px;
   font-family: Roboto;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 500;
 }
 

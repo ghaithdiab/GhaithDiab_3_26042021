@@ -23,6 +23,9 @@
     font-family: 'Roboto', sans-serif;
     font-size: $fontSize;
     font-weight: bold;
+    @include tablet{
+      font-size: 0.8em;
+    }
   }
   .number{
     height: 20px;
