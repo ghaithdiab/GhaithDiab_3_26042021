@@ -305,6 +305,12 @@ main {
   margin: auto;
 }
 
+@media (min-width: 1400px) {
+  main {
+    width: 1400px;
+  }
+}
+
 main header {
   height: 50px;
   display: -webkit-box;
@@ -640,37 +646,17 @@ section .container .link .cart {
 }
 
 section .container .link .cart .backImg {
-  display: block;
   width: 100%;
   height: 200px;
-  background: url("/GhaithDiab_3_26042021/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat center/cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-section .container .link .cart .backimg1 {
-  display: block;
+section .container .link .cart .backImg1 {
   width: 100%;
   height: 200px;
-  background: url("/GhaithDiab_3_26042021/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") no-repeat center/cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-section .container .link .cart .backimg2 {
-  display: block;
-  width: 100%;
-  height: 200px;
-  background: url("/GhaithDiab_3_26042021/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat center/cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-section .container .link .cart .backimg3 {
-  display: block;
-  width: 100%;
-  height: 200px;
-  background: url("/GhaithDiab_3_26042021/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat center/cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -718,7 +704,7 @@ section .container .link .cart p {
 section .container .link .cart .heart {
   margin-top: 30px;
   margin-right: 20px;
-  width: 30px;
+  width: 31px;
   height: 30px;
   cursor: pointer;
   background: url("/GhaithDiab_3_26042021/images/icon/heart.svg") no-repeat center/cover;
@@ -726,6 +712,8 @@ section .container .link .cart .heart {
 
 section .container .link .cart .heart:hover {
   background: url("/GhaithDiab_3_26042021/images/icon/heart-solid.svg") no-repeat center/cover;
+  -webkit-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
 }
 
 @-webkit-keyframes fadeIn {

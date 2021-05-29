@@ -2,9 +2,9 @@
 footer{
   background-color: #353535;
   padding: 25px;
-  @include mobile{
-  
-  }
+  // @include bigScreen{
+  //   width: 100%;
+  // }
 h1{
   color: #fff;
   @include Fonts(Shrikhand,$fontSize,400);

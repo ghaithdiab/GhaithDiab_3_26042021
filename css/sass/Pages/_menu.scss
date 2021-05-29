@@ -47,11 +47,12 @@ main{
     }
     .heart{
       display: block;
-      width: 30px;
+      width: 31px;
       height: 30px;
       background: url('/GhaithDiab_3_26042021/images/icon/heart.svg') no-repeat center /cover;
     &:hover{
       background: url('/GhaithDiab_3_26042021/images/icon/heart-solid.svg') no-repeat center /cover;
+      transition: all .7s ease-in-out;
     }
     }
     .heart-solid{

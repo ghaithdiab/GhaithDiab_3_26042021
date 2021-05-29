@@ -9,6 +9,11 @@
     @content;
   }
 }
+@mixin bigScreen {
+  @media (min-width:$extraLarge) {
+    @content;
+  }
+}
 
 /*------End   mixin breaking points---------*/
 /*------start  mixin Prefixes---------------*/
@@ -40,14 +45,14 @@
 }
 /*------end mixin of cart-----------*/
 /*------start mixin for background--------*/
-@mixin backimg($path) {
-  display: block;
-      width: 100%;
-      height: 200px;
-      background: url($path) no-repeat center /cover;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-}
+// @mixin backimg($path) {
+//       display: block;
+//       width: 100%;
+//       height: 200px;
+//       // background: url($path) no-repeat center /cover;
+//       border-top-left-radius: 15px;
+//       border-top-right-radius: 15px;
+// }
 /*--------End mixin for background-----*/
 @mixin keyFrams {
   @keyframes fadIn {

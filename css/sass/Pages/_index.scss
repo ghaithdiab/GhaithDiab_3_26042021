@@ -120,17 +120,17 @@ section{
       margin-top: 0;
     }
     .backImg{
-      @include backimg('/GhaithDiab_3_26042021/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg'); 
-        
+      width: 100%;
+      height: 200px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
       }
-    .backimg1{
-      @include backimg('/GhaithDiab_3_26042021/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
-      }
-    .backimg2{
-      @include backimg('/GhaithDiab_3_26042021/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
-      }
-    .backimg3{
-        @include backimg('/GhaithDiab_3_26042021/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+    .backImg1{
+      width: 100%;
+      height: 200px;  
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
       }
     .nouveau{
       display: block;
@@ -162,12 +162,14 @@ section{
     .heart{
       margin-top: 30px;
       margin-right: 20px;
-      width: 30px;
+      width: 31px;
       height: 30px;
       cursor: pointer;
       background: url('/GhaithDiab_3_26042021/images/icon/heart.svg') no-repeat center /cover;
     &:hover{
+      
       background: url('/GhaithDiab_3_26042021/images/icon/heart-solid.svg') no-repeat center /cover;
+      transition: all .7s ease-in-out;
       }
     }
     }
